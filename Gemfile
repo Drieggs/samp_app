@@ -4,8 +4,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.1'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -34,8 +32,12 @@ end
 
 group :development, :test do 
   gem 'rspec-rails', '2.9.0'
+  gem 'sqlite3'
 end
 
+group :production do 
+  gem 'pg'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
